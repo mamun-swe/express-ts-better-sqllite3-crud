@@ -1,8 +1,6 @@
 import { Router } from "express";
-import { adminRouter } from "./admin";
-import { userRouter } from "./user";
+import { adminRouter } from "./todo";
 
 export const routers: Router = Router();
 
-routers.use("/admin", adminRouter);
-routers.use("/user", userRouter);
+routers.use("/todos", adminRouter);

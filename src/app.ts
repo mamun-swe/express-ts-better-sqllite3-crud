@@ -18,7 +18,7 @@ app.use(morgan("dev"));
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(ValidXAPIKey);
+// app.use(ValidXAPIKey);
 
 /* Root route */
 app.get("/", (req: Request, res: Response, next: NextFunction) => {
