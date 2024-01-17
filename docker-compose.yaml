@@ -2,21 +2,19 @@ version: "3.9"
 
 services:
   # App service
-  app-service:
+  api:
     build: .
-    image: app-service
-    container_name: app-service
+    image: express-ts-better-sqllite3-image
+    container_name: express-ts-better-sqllite3-container
     ports:
-      - 4000:4000
+      - 5000:5000
     environment:
-      - PORT=4000
-      - DB_URL=
-      - JWT_SECRET=
+      - PORT=5000
 
     networks:
-      - app-container-network
+      - express-ts-better-sqllite3-network
 
 networks:
-  app-container-network:
-    name: app-container-network
+  express-ts-better-sqllite3-network:
+    name: express-ts-better-sqllite3-network
     driver: bridge

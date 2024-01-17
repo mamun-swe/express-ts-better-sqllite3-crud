@@ -1,6 +1,6 @@
 
 # Node version
-FROM node:18
+FROM node:20
 
 # Make work directory
 WORKDIR /usr/src/app
@@ -14,13 +14,11 @@ COPY . ./
 RUN npm install
 RUN npm run build
 
-# POR define
-EXPOSE 4000
+# PORT define
+EXPOSE 5000
 
 # Set ENV variables
-ENV PORT=4000
-ENV DB_URL=
-ENV JWT_SECRET=
+ENV PORT=5000
 
 # Open CMD & execute command
 CMD [ "npm", "start"]
