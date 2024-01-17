@@ -3,7 +3,7 @@ import { NextFunction, Request, Response } from "express";
 import { HttpCode } from "../helpers";
 
 /* Resource create validator */
-const create = async (req: Request, res: Response, next: NextFunction) => {
+const createUpdate = async (req: Request, res: Response, next: NextFunction) => {
   const descriptor = <any>{
     name: {
       type: "string",
@@ -30,5 +30,5 @@ const create = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 export const todoValidators = {
-  create,
+  createUpdate,
 };

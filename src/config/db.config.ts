@@ -7,7 +7,7 @@ export const db = new Database("database/data.db", {
 db.pragma("journal_mode = WAL");
 
 const createTable =
-  "CREATE TABLE IF NOT EXISTS todos('id' primary_key,  'name' varchar, 'description' varchar);";
+  "CREATE TABLE IF NOT EXISTS todos(id INTEGER PRIMARY KEY, 'name' varchar, 'description' varchar);";
 db.exec(createTable);
 
 if (db.open) {
